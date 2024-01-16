@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    unzip
+    unzip \
+    python3 \
+    python3-pip
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*

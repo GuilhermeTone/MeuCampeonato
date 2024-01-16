@@ -1,4 +1,4 @@
-Este projeto foi feito utilizando docker-composer, Laravel, Mysql, algumas libs js, como jQuery, select2, DataTable, mesmo utilizando jQuery opto por colocar codigo javascript puro pois era uma das requisições do teste
+Este projeto foi feito utilizando docker-composer, Laravel, Mysql, algumas libs react, como React-select, Swal
 
 Para instala-lo é necessario ao menos ter o docker desktop instalado no meu caso que utilizo windows, uso o WSL 2 para utiliza-lo
 
@@ -9,7 +9,17 @@ O passo a passo é simples após ter o docker funcionando corretamente basta
 3 - utilizar o comando "docker compose up -d" para subir o container
 4 - utilizar o comando "docker-compose exec app bash" para acessar o terminal do container
 5 - Terminal do container acessado dar o comando "php artisan migrate" para criar as tabelas do banco de dados
-6 - Após a criação das tabelas utilizar o comando "php artisan db:seed --class=ProductTableSeeder" para popular as tabelas necessarias para utilização do projeto, lembrando que essas seeder são para facilitar o trabalho de popular o banco, por exemplo executar o comando 2 vezes, resultará em 20 produtos, entretanto as referencias vão continuar nos 10 produtos criados anteriormente pois ele pega um numero aleatorio de 1 a 10
+6 - Popular a tabela de participantes, abra mysql em seu workbench, no caso eu utilizo o heidisql e rode o comando
+
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time A', '2024-01-15 22:48:37', NULL, NULL);
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time B', '2024-01-15 22:48:38', NULL, NULL);
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time C', '2024-01-15 22:48:39', NULL, NULL);
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time D', '2024-01-15 22:48:38', NULL, NULL);
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time E', '2024-01-15 22:48:39', NULL, NULL);
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time F', '2024-01-15 22:48:40', NULL, NULL);
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time G', '2024-01-15 22:48:39', NULL, NULL);
+INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time H', '2024-01-15 22:48:40', NULL, NULL);
+
 
 O projeto pode ser acessado na rota http://localhost:8989/
 

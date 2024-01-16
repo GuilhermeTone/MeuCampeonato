@@ -31,7 +31,8 @@ export default function Historico({ auth }: PageProps) {
             .then(response => response.json())
             .then(data => {
                 if(data.length){
-                    setResultados(data)
+                    setResultados(data);
+                    Swal.close();
                 }else{
                     Swal.fire({
                         title: 'Sem Campeonatos registrados',

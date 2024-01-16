@@ -7,8 +7,9 @@ O passo a passo é simples após ter o docker funcionando corretamente basta
 1 - abrir o terminal na pasta raiz do projeto
 2 - utilizar o comando "composer install", para fazer o download das dependencias do projeto
 3 - utilizar o comando "docker compose up -d" para subir o container
-4 - utilizar o comando "docker-compose exec app bash" para acessar o terminal do container
+4 - utilizar o comando "docker-compose exec app bash" para acessar o terminal do container caso não consiga talvez seja porque seu container está com outro nome ao invés de app, neste caso dê o docker ps e acesse diretamente pelo id do container
 5 - Terminal do container acessado dar o comando "php artisan migrate" para criar as tabelas do banco de dados
+6- dê o exit para sair do terminal do docker
 6 - npm install
 7 - Popular a tabela de participantes, abra mysql em seu workbench, no caso eu utilizo o heidisql e rode o comando
 
@@ -21,7 +22,7 @@ INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) V
 INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time G', '2024-01-15 22:48:39', NULL, NULL);
 INSERT INTO `participantes` (`name`, `created_at`, `updated_at`, `deleted_at`) VALUES ('Time H', '2024-01-15 22:48:40', NULL, NULL);
 
-
+8 - npm run build
 
 
 O projeto pode ser acessado na rota http://localhost:8989/

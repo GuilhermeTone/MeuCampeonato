@@ -61,7 +61,7 @@ export default function Campeonato({ auth }: PageProps) {
 
                 // Iterando sobre as chaves e valores do objeto successResponse
                 Object.entries(successResponse.sucesso).forEach(([posicao, nomeTime]) => {
-                    message += `${posicao.replace("_", " ")}: ${nomeTime}`;
+                    message += ' ' + `${posicao.replace("_", " ")}:  ${nomeTime}`;
                 });
                 Swal.fire({
                     title: 'Sucesso!',

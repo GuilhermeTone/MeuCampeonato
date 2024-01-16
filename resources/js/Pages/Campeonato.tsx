@@ -21,7 +21,7 @@ export default function Campeonato({ auth }: PageProps) {
                 title: 'Que os jogos comecem!',
                 html: '<img src="https://media1.tenor.com/m/kXdU71jKYuYAAAAd/ameno-dorime-dorime.gif" width="300"  style="margin: 0 auto" alt="GIF">',
                 icon: 'info',
-                confirmButtonText: 'Ok!'
+                showConfirmButton: false
             })
             const csrfTokenMeta = document.head.querySelector('meta[name="csrf-token"]');
 

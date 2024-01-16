@@ -31,7 +31,12 @@ const Select2: React.FC<Selecionados> = ({ idSelecionados, onSelecionadosChange 
                 Swal.close()
             })
             .catch(error => {
-                console.error('Erro ao buscar opções do backend:', error);
+                console.error('Erro na requisição:', error);
+                Swal.fire({
+                    title: 'Sem Times cadastrados',
+                    icon: 'info',
+                    showConfirmButton: false
+                })
             });
     }, []);
 
